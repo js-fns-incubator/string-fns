@@ -1,0 +1,24 @@
+{
+  "name": "string-fns",
+  "version": "0.1.0",
+  "author": "Andrei Terentev <dolby0@gmail.com>",
+  "description": "String functions",
+  "repository": "https://github.com/js-fns/string-fns",
+  "engine": {
+    "node": ">= 0.10"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "karma-chai-sinon": "^0.1.4",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karmak": "^0.2.2",
+    "webpack": "^1.4.13"
+  },
+  "scripts": {
+    "karmak": "karmak --webpack-config ./config/webpack.js --karma-config ./config/karma.js",
+    "test": "npm run-script karmak -- --single-run",
+    "autotest": "npm run-script karmak",
+    "build": "webpack --config ./config/webpack.js"
+  }
+}
