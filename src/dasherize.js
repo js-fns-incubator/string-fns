@@ -1,3 +1,13 @@
+var isNumber = require('./is_number');
+var isUpperCase = require('./is_upper_case');
+
+/**
+ * Dasherize the input `str`
+ * @example
+ *  dasherize('HelloThere'); //hello-there
+ * @param  {string}
+ * @return {string}
+ */
 var dasherize = function(str){
   var slicesIndexes = [0];
 
@@ -24,16 +34,6 @@ var dasherize = function(str){
       return str.slice(sliceStart).toLowerCase();
     }
   }).join('-');
-}
-
-var isUpperCase = function(str){
-  return str.toUpperCase() === str && isLetter(str);
-}
-var isLetter = function(str){
-  return str.toUpperCase() !== str.toLowerCase();
-}
-var isNumber = function(str){
-  return /\d/.test(str);
 }
 
 module.exports = dasherize;
