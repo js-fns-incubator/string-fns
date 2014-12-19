@@ -46,5 +46,10 @@ describe('dasherize', function() {
     expect(result).to.be.eql('some-shitty-string-here-and-here');
   });
 
+  it('respect UTF', function() {
+    var result = dasherize('ПриветАндрей')
+    expect(result).to.be.eql('привет-андрей');
+  });
+
 });
 
